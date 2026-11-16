@@ -1,0 +1,23 @@
+# actions.lock이 워크플로와 맞지 않거나 고정한 커밋을 더는 확인할 수 없으면 실패한다(infra #138).
+# 확장 버전(--pin)은 dependabot이 올리지 않는다. 로컬 gh actions-lock 버전에 맞춰 손으로 올린다.
+name: lockfile 검사
+on:
+  pull_request:
+    paths: [.github/workflows/**]
+  push:
+    branches: [main]
+    paths: [.github/workflows/**]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - run: gh extension install github/gh-actions-lock --pin v0.4.0
+      - run: gh actions-lock --verify
