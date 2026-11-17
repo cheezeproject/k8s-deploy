@@ -9,7 +9,7 @@
     "prettier": "prettier --check ."
   },
   "dependencies": {
-    "@actions/artifact": "^2.1.7",
+    "@actions/artifact": "^6.3.1",
     "@actions/core": "^1.10.1",
     "json5": "^2.2.3"
   },
