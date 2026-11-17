@@ -1,9 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const childProcess = require('child_process');
-const core = require('@actions/core');
-const { DefaultArtifactClient } = require('@actions/artifact');
-const JSON5 = require('json5');
+import fs from 'node:fs';
+import path from 'node:path';
+import childProcess from 'node:child_process';
+import * as core from '@actions/core';
+import { DefaultArtifactClient } from '@actions/artifact';
+import JSON5 from 'json5';
 
 (async () => {
   try {

@@ -5,20 +5,21 @@
   "main": "index.js",
   "scripts": {
     "build": "ncc build index.js --license licenses.txt",
-    "lint": "eslint . --ext js --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "prettier": "prettier --check ."
   },
   "dependencies": {
-    "@actions/artifact": "^2.1.7",
-    "@actions/core": "^1.10.1",
+    "@actions/artifact": "^6.3.1",
+    "@actions/core": "^3.0.1",
     "json5": "^2.2.3"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.38.1",
-    "eslint": "^8.35.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "prettier": "^3.2.5"
-  }
+    "@eslint/js": "^10.0.1",
+    "@vercel/ncc": "^0.45.0",
+    "eslint": "^10.15.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1"
+  },
+  "type": "module"
 }
