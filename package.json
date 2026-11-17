@@ -14,11 +14,11 @@
     "json5": "^2.2.3"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.38.1",
+    "@vercel/ncc": "^0.45.0",
     "eslint": "^8.35.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "prettier": "^3.2.5"
+    "eslint-plugin-import": "^2.32.0",
+    "prettier": "^3.9.10"
   }
 }
